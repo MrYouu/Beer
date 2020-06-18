@@ -579,7 +579,7 @@ body
 /*#region Colors */
 #f03
 {
-    background-image: linear-gradient(to top right, #c33b8d, #ee50b0);
+    background-image: linear-gradient(to top right, #c33b8d, #ff88cf);
 }
 /*#endregion Colors */
 
@@ -1060,6 +1060,13 @@ img
     .nextButton
     {
         right: 50;
+    }
+
+    /* Colors */
+
+    #f03
+    {
+        background-image: linear-gradient(to top left, #c33b8d, #ff88cf);
     }
 }
 /*#endregion Media 1300-1000 */
