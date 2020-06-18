@@ -1,0 +1,1467 @@
+/*The CSS code is property to Mr. You (Kristiyan Valchev) and can only be viewed*/
+/*If you want to use part of the code, please first contact me: krisvalchev@gmail.com*/
+
+html
+{
+    font-family: 'Nunito', sans-serif;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+body
+{
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    background-color: #e9e9e9;
+    overflow-x: hidden;
+}
+
+/*#region Scrow bar */
+::-webkit-scrollbar
+{
+	width: 10px;
+}
+
+::-webkit-scrollbar-track
+{
+    background-color: #c7c7c7;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background: #a1a1a1; 
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover
+{
+    background: #919191;
+}
+/*#endregion Scrow bar */
+
+/*#region Top bar */
+.topBar
+{
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background-color: transparent;
+    z-index: 2;
+
+    transition: ease .3s;
+    animation: dropDown .3s ease-out forwards .1s;
+    transform: translateY(-110px);
+    opacity: 0;
+}
+
+.topBar a
+{
+    display: inline;
+    position: relative;
+    padding: 22px 30px;
+    font-size: 22px;
+    text-decoration: none;
+    color: #2f2f2f;
+    top: calc(50% - 15px);
+    left: 50px;
+
+    transition: ease .3s;
+}
+
+.topBar a::before
+{
+    content: "";
+    position: absolute;
+    width: 90%;
+    height: 2.1px;
+    bottom: 10px;
+    left: 5%;
+    background-color: #B24204;
+    visibility: hidden;
+    transform: scaleX(0);
+    
+    transition: ease .3s;
+}
+
+.topBar a.Logo
+{
+    font-size: 36px;
+    font-weight: bolder;
+    color: #1f1f1f;
+}
+
+.topBar a.Contacts
+{
+    display: none;
+}
+
+.topBar a.Active
+{
+    color: #FF620B99;
+}
+
+.topBar a.Active:hover
+{
+    color: #FF620Bbb;
+}
+
+.topBar a:hover
+{
+    color: #2f2f2fc4;
+}
+
+.topBar a:hover::before
+{
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.topBar a.Logo:hover
+{
+    color: #1f1f1fc4;
+}
+
+.topBar a.threeLineButton
+{
+    display: none;
+    float: left;
+    width: 70px;
+    height: 35px;
+    top: 25;
+    left: 30;
+    background-color: transparent;
+    padding: 0;
+
+    transition: ease .3s;
+}
+
+.topBar a.threeLineButton div
+{
+    float: right;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    left: 0;
+    background-color: #323449;
+    border-radius: 999px;
+
+    transition: ease .3s;
+}
+
+.topBar a.threeLineButton div:nth-child(1)
+{
+    width: 100%;
+    top: 0;
+}
+
+.topBar a.threeLineButton div:nth-child(2)
+{
+    width: 75%;
+    top: calc(50% - 2px);
+}
+
+.topBar a.threeLineButton div:nth-child(3)
+{
+    width: 100%;
+    bottom: 0;
+}
+
+.topBar a.threeLineButton:hover::before
+{
+    transform: scaleX(0);
+}
+
+.topBar a.threeLineButton:hover div
+{
+    background-color: #2f2f2fc4;
+    width: 100%;
+}
+/*#endregion Top bar */
+
+/*#region Side menu */
+.sideMenu
+{
+    display: none;
+    position: absolute;
+    width: calc(100% - 50px);
+    height: calc(100% - 50px);
+    top: auto;
+    bottom: -40;
+    left: -40;
+    background-image: linear-gradient(to top right, #b6b6b6, #d0d0d0);
+    border-radius: 40px;
+
+    z-index: 10;
+
+    transition: ease .3s;
+    transform: translate(-700px);
+}
+
+.sideMenu a
+{
+    display: table;
+    position: relative;
+    top: 120;
+    left: 90;
+    font-size: 30px;
+    text-decoration: none;
+    color: #1f1f1f;
+    line-height: 60px;
+
+    transition: ease .3s;
+}
+
+.sideMenu a i
+{
+    color: #1f1f1f;
+    transition: ease .3s;
+}
+
+.sideMenu a:hover i
+{
+    color: #FF620B;
+}
+
+.sideMenu a.Active
+{
+    color: #FF620B;
+}
+
+.sideMenu .Line
+{
+    position: absolute;
+    width: 50%;
+    height: 4px;
+    top: 280;
+    left: 60;
+    background-color: #1f1f1f40;
+    border-radius: 999px;
+
+    transition: ease .3s;
+}
+
+.sideMenu .contactLinks
+{
+    position: absolute;
+    width: calc(100% - 40px);
+    height: 50px;
+    bottom: 70;
+    left: 40;
+
+    transition: ease .3s;
+}
+
+.sideMenu .contactLinks a
+{
+    display: unset;
+    position: relative;
+    top: 0;
+    left: 20;
+    font-size: 50px;
+    text-decoration: none;
+    color: #1f1f1f;
+    line-height: unset;
+    padding-right: 20px;
+
+    transition: ease .3s;
+}
+
+.contactLinks a:nth-child(1):hover i, .contactLinks a:nth-child(2):hover i
+{
+    color: #3b5998;
+}
+
+.contactLinks a:nth-child(3):hover i
+{
+    color: #808080;
+}
+
+.sideMenu a.closeButton
+{
+    float: right;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 30;
+    left: auto;
+    right: 30;
+    background-color: transparent;
+
+    transition: ease .3s;
+}
+
+.sideMenu a.closeButton div
+{
+    position: absolute;
+    width: 60px;
+    height: 7px;
+    top: 50%;
+    left: 0;
+    background-color: #FF620B;
+
+    transition: ease .3s;
+}
+
+.sideMenu a.closeButton div:nth-child(1)
+{
+    transform: rotate(45deg);
+}
+
+.sideMenu a.closeButton div:nth-child(2)
+{
+    transform: rotate(-45deg);
+}
+
+.sideMenu a.closeButton:hover div
+{
+    width: 65px;
+    background-color: #B24204;
+}
+/*#endregion Side menu */
+
+/*#region Shapes */
+.Cercle01
+{
+    float: left;
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    left: 250;
+    top: -300;
+    background-color: #e0e0e0;
+    border-radius: 999px;
+
+    transition: ease .3s;
+}
+
+.Cercle02
+{
+    float: right;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    right: 100;
+    top: 400;
+    background-color: #e0e0e0;
+    border-radius: 999px;
+
+    transition: ease .3s;
+}
+
+.firstBox
+{
+    display: block;
+    float: left;
+    position: absolute;
+    width: 350px;
+    height: 700px;
+    top: 220;
+    left: 350;
+    background-image: linear-gradient(to top right, #B24204, #FF620B);
+    border-radius: 40px;
+
+    z-index: 3;
+
+    transition: ease .3s;
+}
+
+.firstBox h1
+{
+    font-family: 'Open Sans', sans-serif;
+
+    position: absolute;
+    top: 10;
+    left: 30;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #e9e9e9;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.firstBox img
+{
+    float: right;
+    position: absolute;
+    width: 120px;
+    top: 120;
+    right: 50;
+
+    filter: drop-shadow(5px 5px 20px #00000088);
+    -webkit-filter: drop-shadow(5px 5px 10px #00000088);
+
+    transition: ease .3s;
+}
+
+.firstBox h3
+{
+    position: absolute;
+    top: 400;
+    left: 30;
+    font-size: 24px;
+    font-weight: 100;
+    color: #e9e9e9;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.firstBox h2
+{
+    position: absolute;
+    top: 430;
+    left: 30;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #fdefe5;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.firstBox a
+{
+    position: absolute;
+    top: 530;
+    left: 30;
+    font-size: 30px;
+    text-decoration: none;
+    color: #1f1f1f;
+    background-color: #e9e9e9;
+    padding: 3px 30px;
+    border-radius: 999px;
+
+    box-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.firstBox img:hover, .secondBox img:hover
+{
+    width: 130px;
+}
+
+.firstBox a:hover, .secondBox a:hover
+{
+    padding: 3px 36px;
+}
+
+.secondBox
+{
+    display: block;
+    position: absolute;
+    width: 350px;
+    height: 700px;
+    top: 220;
+    left: 900;
+    background-image: linear-gradient(to top right, #00B2AE, #0BFFF9);
+    border-radius: 40px;
+
+    z-index: 3;
+
+    transition: ease .3s;
+}
+
+.secondBox h1
+{
+    font-family: 'Open Sans', sans-serif;
+
+    position: absolute;
+    top: 10;
+    left: 30;
+    font-size: 80px;
+    font-weight: bolder;
+    color: #e9e9e9;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.secondBox img
+{
+    float: right;
+    position: absolute;
+    width: 120px;
+    top: 120;
+    right: 50;
+
+    filter: drop-shadow(5px 5px 20px #00000088);
+    -webkit-filter: drop-shadow(5px 5px 10px #00000088);
+
+    transition: ease .3s;
+}
+
+.secondBox h3
+{
+    position: absolute;
+    top: 400;
+    left: 30;
+    font-size: 24px;
+    font-weight: 100;
+    color: #e9e9e9;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.secondBox h2
+{
+    position: absolute;
+    top: 430;
+    left: 30;
+    font-size: 45px;
+    font-weight: bolder;
+    color: #d8e9e9;
+    padding: 0;
+    margin: 0;
+
+    text-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.secondBox a
+{
+    position: absolute;
+    top: 530;
+    left: 30;
+    font-size: 30px;
+    text-decoration: none;
+    color: #1f1f1f;
+    background-color: #e9e9e9;
+    padding: 3px 30px;
+    border-radius: 999px;
+
+    box-shadow: 5px 5px 5px #00000044;
+
+    transition: ease .3s;
+}
+
+.holder
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+    transition: ease .3s;
+}
+
+.secondBox:hover, .firstBox:hover
+{
+    top: 110;
+}
+/*#endregion Shapes */
+
+/*#region Main page */
+.mainTitle
+{
+    position: absolute;
+    font-size: 60px;
+    font-weight: bolder;
+    top: calc(50% - 80px);
+    left: -50;
+    color: #1f1f1f;
+    transform: rotate(-90deg);
+
+    transition: ease .3s;
+    animation: Titals .3s ease-out forwards .5s;
+    transform: translateX(-100px) rotate(0deg);
+    opacity: 0;
+}
+
+.secondTitle
+{
+    position: absolute;
+    font-size: 30px;
+    font-weight: bolder;
+    top: calc(50% - 50px);
+    left: 130;
+    color: #c7c7c7;
+    transform: rotate(-90deg);
+
+    transition: ease .3s;
+    animation: Titals .3s ease-out forwards .7s;
+    transform: translateX(-100px) rotate(0deg);
+    opacity: 0;
+}
+
+.sideLinks
+{
+    float: right;
+    position: absolute;
+    width: 50px;
+    height: 250px;
+    top: calc(50% - 125px);
+    right: 50px;
+
+    transition: ease .3s;
+    animation: dropRight .3s ease-out forwards 1s;
+    transform: translateX(110px);
+    opacity: 0;
+}
+
+.sideLinks a
+{
+    display: table;
+    width: 100%;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    padding-bottom: 50px;
+    color: #a1a1a1;
+
+    transition: ease .3s;
+}
+
+.sideLinks a:nth-child(1):hover, .sideLinks a:nth-child(2):hover
+{
+    color: #3b5998;
+}
+
+.sideLinks a:nth-child(3):hover
+{
+    color: #808080;
+}
+
+.prevButton, .nextButton
+{
+    position: absolute;
+    width: 170px;
+    height: 50px;
+    bottom: 30;
+    text-decoration: none;
+    background-color: transparent;
+
+    z-index: 5;
+
+    transition: ease .3s;
+}
+
+.prevButton
+{
+    float: left;
+    left: 50;
+}
+
+.nextButton
+{
+    float: right;
+    right: 50;
+}
+
+.prevButton p, .nextButton p, .prevButton i, .nextButton i
+{
+    position: absolute;
+    width: 100%;
+    top: calc(50% - 15px);
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
+
+    transition: ease .3s;
+}
+
+.prevButton i, .nextButton i
+{
+    font-size: 30px;
+    top: calc(50% - 12px);
+}
+
+.prevButton p, .nextButton i
+{
+    text-align: right;
+}
+
+.nextButton p, .prevButton i
+{
+    text-align: left;
+}
+
+.prevButton:hover i, .nextButton:hover i
+{
+    font-size: 38px;
+    top: calc(50% - 16px);
+}
+/*#endregion Main page */
+
+img
+{
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/*#region Animations */
+@keyframes dropDown
+{
+    0%
+    {
+        transform: translateY(-110px);
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes dropRight
+{
+    0%
+    {
+        transform: translateX(110px);
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes Titals
+{
+    0%
+    {
+        transform: translateX(-100px) rotate(0deg);
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: translateX(0px) rotate(-90deg);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOutDown
+{
+    0%
+    {
+        transform: translateY(0pc);
+        visibility: unset;
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translateY(100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOutRight
+{
+    0%
+    {
+        transform: translateX(0pc);
+        visibility: unset;
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translateX(100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInUp
+{
+    0%
+    {
+        transform: translateY(100pc);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: translateY(0px);
+        visibility: unset;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInLeft
+{
+    0%
+    {
+        transform: translateX(100pc);
+        visibility: hidden;
+        opacity: 0;
+    }
+
+    100%
+    {
+        transform: translateX(0px);
+        visibility: unset;
+        opacity: 1;
+    }
+}
+/*#endregion Animations */
+
+/*#region Media 1300-1000 */
+@media screen and (max-width: 1300px)
+{
+    .mainTitle
+    {
+        left: -70;
+    }
+
+    .secondTitle
+    {
+        left: 110;
+    }
+
+    .firstBox
+    {
+        left: 270;
+    }
+
+    .secondBox
+    {
+        left: 700;
+    }
+}
+
+@media screen and (max-width: 1200px)
+{
+    .mainTitle
+    {
+        left: -90;
+    }
+
+    .secondTitle
+    {
+        left: 90;
+    }
+
+    .firstBox
+    {
+        left: 220;
+    }
+
+    .secondBox
+    {
+        left: 600;
+    }
+}
+
+@media screen and (max-width: 1100px)
+{
+    .mainTitle
+    {
+        left: -80;
+        font-size: 50px;
+    }
+
+    .secondTitle
+    {
+        left: 70;
+        font-size: 26px;
+    }
+
+    .firstBox
+    {
+        left: 160;
+    }
+
+    .secondBox
+    {
+        left: 530;
+    }
+
+    .prevButton
+    {
+        left: 20;
+    }
+
+    .nextButton
+    {
+        right: 20;
+    }
+}
+
+@media screen and (max-width: 1000px)
+{
+    .mainTitle
+    {
+        left: -50;
+    }
+
+    .secondTitle
+    {
+        left: 110;
+    }
+
+    .firstBox
+    {
+        width: calc(100% + 40px - 150px);
+        height: 350px;
+        top: calc(50% - 175px);
+        left: 360;
+        background-image: linear-gradient(to top left, #B24204, #FF620B);
+    }
+
+    .firstBox img, .secondBox img
+    {
+        float: left;
+        width: auto;
+        height: 250px;
+        top: 120;
+        left: 150;
+    }
+
+    .firstBox h3, .secondBox h3
+    {
+        top: 150;
+        left: 320;
+    }
+
+    .firstBox h2, .secondBox h2
+    {
+        top: 180;
+        left: 320;
+    }
+
+    .firstBox a, .secondBox a
+    {
+        top: auto;
+        bottom: 30;
+        left: 400;
+    }
+
+    .secondBox
+    {
+        visibility: hidden;
+        opacity: 0;
+
+        width: calc(100% + 40px - 150px);
+        height: 350px;
+        top: calc(50% - 175px);
+        left: 360;
+        background-image: linear-gradient(to top left, #00B2AE, #0BFFF9);
+    }
+
+    .firstBox:hover, .secondBox:hover
+    {
+        top: calc(50% - 175px);
+        left: 230;
+    }
+
+    .firstBox:hover h2, .secondBox:hover h2
+    {
+        top: 150;
+        left: 425;
+    }
+
+    .firstBox:hover h3, .secondBox:hover h3
+    {
+        top: 60;
+        left: 430;
+    }
+
+    .firstBox:hover a, .secondBox:hover a
+    {
+        left: 420;
+    }
+
+    .firstBox a:hover, .secondBox a:hover
+    {
+        padding: 3px 70px;
+        transform: translateX(-40px);
+    }
+
+    .firstBox img:hover, .secondBox img:hover
+    {
+        width: auto;
+        height: 270px;
+        transform: translateY(-20px) translateX(-5px);
+    }
+
+    .sideLinks
+    {
+        float: left;
+        width: 300px;
+        height: 50px;
+        top: auto;
+        bottom: 40px;
+        right: auto;
+        left: calc(50% - 125px);
+    }
+
+    .sideLinks a
+    {
+        display: unset;
+        width: 50px;
+        text-align: left;
+        padding-bottom: 0;
+        padding-right: 50px;
+    }
+
+    .prevButton
+    {
+        left: 50;
+    }
+
+    .nextButton
+    {
+        right: 50;
+    }
+}
+/*#endregion Media 1300-1000 */
+
+/*#region Media 900-700 */
+@media screen and (max-width: 900px)
+{
+    .mainTitle
+    {
+        left: -80;
+        font-size: 50px;
+    }
+
+    .secondTitle
+    {
+        left: 70;
+        font-size: 26px;
+    }
+
+    .firstBox, .secondBox
+    {
+        left: 260;
+    }
+
+    .firstBox:hover, .secondBox:hover
+    {
+        left: 150;
+    }
+}
+
+@media screen and (max-width: 850px)
+{
+    .topBar a.Contacts
+    {
+        display: inline;
+    }
+
+    .sideLinks
+    {
+        display: none;
+    }
+
+    .Cercle01
+    {
+        left: -200;
+    }
+
+    .firstBox, .secondBox
+    {
+        width: calc(100% + 40px - 50px);
+        top: calc(50% - 110px);
+        left: 150;
+    }
+
+    .firstBox:hover, .secondBox:hover
+    {
+        top: calc(50% - 110px);
+        left: 50;
+    }
+
+    .mainTitle
+    {
+        top: 80;
+        left: 50;
+        font-size: 50px;
+        transform: rotate(0deg);
+    }
+
+    .secondTitle
+    {
+        top: 150;
+        left: 250;
+        font-size: 26px;
+        transform: rotate(0deg);
+        color: #a1a1a1;
+    }
+
+    @keyframes Titals
+    {
+        0%
+        {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform: translateX(0px);
+            opacity: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 750px)
+{
+    .prevButton, .nextButton
+    {
+        width: 30px;
+    }
+
+    .prevButton p, .nextButton p
+    {
+        display: none;
+    }
+
+    .topBar a, .topBar a.Contacts
+    {
+        display: none;
+    }
+
+    .topBar a.threeLineButton
+    {
+        display: inline-block;
+    }
+    .sideMenu
+    {
+        display: inline;
+    }
+
+    .firstBox, .secondBox
+    {
+        width: 350px;
+        height: calc(100% + 40px - 50px);
+        top: -200;
+        left: auto;
+        right: 30;
+    }
+
+    .firstBox h1, .secondBox h1
+    {
+        top: auto;
+        bottom: 10;
+        left: 30;
+    }
+    
+    .firstBox img, .secondBox img
+    {
+        top: auto;
+        bottom: -30;
+        left: 170;
+    }
+
+    .firstBox h3, .secondBox h3
+    {
+        top: 250;
+        left: 60;
+    }
+
+    .firstBox h2, .secondBox h2
+    {
+        top: 280;
+        left: 60;
+    }
+
+    .firstBox a, .secondBox a
+    {
+        top: 150;
+        bottom: auto;
+        left: calc(50% - 80px);
+    }
+
+    .firstBox:hover, .secondBox:hover
+    {
+        top: -120;
+        left: auto;
+    }
+
+    .firstBox:hover h2, .secondBox:hover h2
+    {
+        top: 280;
+        left: 90;
+    }
+
+    .firstBox:hover h3, .secondBox:hover h3
+    {
+        top: 250;
+        left: 90;
+    }
+
+    .firstBox:hover a, .secondBox:hover a
+    {
+        bottom: auto;
+        left: calc(50% - 80px);
+    }
+
+    .firstBox a:hover, .secondBox a:hover
+    {
+        padding: 3px 70px;
+        transform: translateX(-40px);
+    }
+
+    .firstBox img:hover, .secondBox img:hover
+    {
+        transform: translateY(-5px) translateX(-5px);
+    }
+
+    .mainTitle
+    {
+        left: 30;
+    }
+
+    .secondTitle
+    {
+        left: 35;
+    }
+}
+
+@media screen and (max-width: 700px)
+{
+    .mainTitle
+    {
+        top: calc(50% - 80px);
+        left: -80;
+        font-size: 50px;
+        transform: rotate(-90deg);
+    }
+
+    .secondTitle
+    {
+        top: calc(50% - 50px);
+        left: 70;
+        font-size: 26px;
+        transform: rotate(-90deg);
+    }
+
+    @keyframes Titals
+    {
+        0%
+        {
+            transform: translateX(-100px) rotate(0deg);
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform: translateX(0px) rotate(-90deg);
+            opacity: 1;
+        }
+    }
+}
+/*#endregion Media 900-700 */
+
+/*#region Media 600-400 */
+@media screen and (max-width: 600px)
+{
+
+}
+
+@media screen and (max-width: 500px)
+{
+    .firstBox, .secondBox
+    {
+        width: calc(100% - 90px);
+        height: calc(100% + 40px - 50px);
+        top: -200;
+        left: auto;
+        right: -40;
+    }
+}
+
+@media screen and (max-width: 450px)
+{
+    .firstBox h1, .secondBox h1
+    {
+        top: 200px;
+        bottom: auto;
+        left: 20;
+    }
+
+    .firstBox img, .secondBox img
+    {
+        bottom: -30;
+        left: 60;
+    }
+
+    .firstBox h3, .secondBox h3
+    {
+        top: 320;
+    }
+
+    .firstBox h2, .secondBox h2
+    {
+        top: 350;
+    }
+
+    .firstBox a, .secondBox a
+    {
+        left: calc(50% - 110px);
+    }
+
+    .firstBox:hover h2, .secondBox:hover h2
+    {
+        top: 350;
+        left: 90;
+    }
+
+    .firstBox:hover h3, .secondBox:hover h3
+    {
+        top: 320;
+        left: 90;
+    }
+
+    .firstBox:hover a, .secondBox:hover a
+    {
+        left: calc(50% - 100px);
+    }
+
+    .firstBox a:hover, .secondBox a:hover
+    {
+        padding: 3px 50px;
+        transform: translateX(-20px);
+    }
+}
+/*#endregion Media 600-400 */
+
+/*#region Media 380-350 */
+@media screen and (max-width: 380px)
+{
+    .firstBox img, .secondBox img
+    {
+        height: 200px;
+    }
+
+    .firstBox img:hover, .secondBox img:hover
+    {
+        height: 220px;
+    }
+
+    .firstBox:hover h2, .secondBox:hover h2
+    {
+        left: 60;
+    }
+
+    .firstBox:hover h3, .secondBox:hover h3
+    {
+        left: 60;
+    }
+}
+
+@media screen and (max-width: 350px)
+{
+    .firstBox h1, .secondBox h1
+    {
+        top: 210px;
+        font-size: 60px;
+    }
+
+    .firstBox img, .secondBox img
+    {
+        height: 150px;
+    }
+
+    .firstBox h3, .secondBox h3
+    {
+        top: 300;
+        left: 30;
+    }
+
+    .firstBox h2, .secondBox h2
+    {
+        top: 330;
+        left: 30px;
+    }
+
+    .firstBox a, .secondBox a
+    {
+        left: calc(50% - 90px);
+        padding: 3px 20px;
+    }
+
+    .firstBox img:hover, .secondBox img:hover
+    {
+        height: 170px;
+    }
+
+    .firstBox:hover h2, .secondBox:hover h2
+    {
+        top: 330;
+        left: 25;
+    }
+
+    .firstBox:hover h3, .secondBox:hover h3
+    {
+        top: 300;
+        left: 25;
+    }
+
+    .firstBox:hover a, .secondBox:hover a
+    {
+        left: calc(50% - 90px);
+    }
+
+    .firstBox a:hover, .secondBox a:hover
+    {
+        padding: 3px 25px;
+        transform: translateX(-10px);
+    }
+
+    .sideMenu a
+    {
+        left: 60;
+    }
+
+    .sideMenu .contactLinks
+    {
+        bottom: 45;
+    }
+
+    .sideMenu .contactLinks a
+    {
+        font-size: 30px;
+    }
+}
+/*#endregion Media 380-350 */
