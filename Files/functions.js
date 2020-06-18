@@ -231,7 +231,8 @@ function myFunction(x)
   myFunction(x)
   x.addListener(myFunction)
 
-  if (window.matchMedia('(max-width: 1000px)').matches)
+  if (window.matchMedia('(max-width: 1000px)').matches ||
+      window.matchMedia('screen and (max-width: 1000px)').matches)
   {
     document.addEventListener("DOMContentLoaded",
     function()
