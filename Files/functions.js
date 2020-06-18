@@ -8,12 +8,12 @@ function start()
 {
     if (screenSize == 0)
     {
-        document.getElementById("01").style.animation = "fadeInUp .5s ease-out forwards .3s";
-        document.getElementById("02").style.animation = "fadeInUp .5s ease-out forwards .5s";
+        document.getElementById("f01").style.animation = "fadeInUp .5s ease-out forwards .3s";
+        document.getElementById("s02").style.animation = "fadeInUp .5s ease-out forwards .5s";
     }
-    else if (screenSize == 1 || screen.width < 1000)
+    else if (window.screen.width > 1000) //screenSize == 1
     {
-        document.getElementById("01").style.animation = "fadeInLeft .5s ease-out forwards .3s";
+        document.getElementById("f01").style.animation = "fadeInLeft .5s ease-out forwards .3s";
     }
 }
 
@@ -31,11 +31,11 @@ function nextBeer()
 {
     if (drinkNumber == 1 && screenSize == 0)
     {
-        document.getElementById("01").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("02").style.animation = "fadeOutDown .5s ease-in forwards";
+        document.getElementById("f01").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s02").style.animation = "fadeOutDown .5s ease-in forwards";
 
-        document.getElementById("03").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("04").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f03").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s04").style.animation = "fadeInUp 1s ease-out forwards";
 
         document.getElementById("prevButton").style.animation = "fadeInUp 1s ease-out forwards";
 
@@ -43,21 +43,21 @@ function nextBeer()
     }
     else if (drinkNumber == 2 && screenSize == 0)
     {
-        document.getElementById("03").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("04").style.animation = "fadeOutDown .5s ease-in forwards";
+        document.getElementById("f03").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s04").style.animation = "fadeOutDown .5s ease-in forwards";
 
-        document.getElementById("05").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("06").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f05").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s06").style.animation = "fadeInUp 1s ease-out forwards";
 
         drinkNumber = 3;
     }
     else if (drinkNumber == 3 && screenSize == 0)
     {
-        document.getElementById("05").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("06").style.animation = "fadeOutDown .5s ease-in forwards";
+        document.getElementById("f05").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s06").style.animation = "fadeOutDown .5s ease-in forwards";
 
-        document.getElementById("07").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("08").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f07").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s08").style.animation = "fadeInUp 1s ease-out forwards";
 
         document.getElementById("nextButton").style.animation = "fadeOutDown .5s ease-in forwards";
 
@@ -68,8 +68,8 @@ function nextBeer()
 
     if (drinkNumber == 1 && screenSize == 1)
     {
-        document.getElementById("01").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("02").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f01").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s02").style.animation = "fadeInLeft 1s ease-out forwards";
 
         document.getElementById("prevButton").style.animation = "fadeInUp 1s ease-out forwards";
 
@@ -77,43 +77,43 @@ function nextBeer()
     }
     else if (drinkNumber == 2 && screenSize == 1)
     {
-        document.getElementById("02").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("03").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s02").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f03").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 3;
     }
     else if (drinkNumber == 3 && screenSize == 1)
     {
-        document.getElementById("03").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("04").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f03").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s04").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 4;
     }
     else if (drinkNumber == 4 && screenSize == 1)
     {
-        document.getElementById("04").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("05").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s04").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f05").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 5;
     }
     else if (drinkNumber == 5 && screenSize == 1)
     {
-        document.getElementById("05").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("06").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f05").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s06").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 6;
     }
     else if (drinkNumber == 6 && screenSize == 1)
     {
-        document.getElementById("06").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("07").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s06").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f07").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 7;
     }
     else if (drinkNumber == 7 && screenSize == 1)
     {
-        document.getElementById("07").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("08").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f07").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s08").style.animation = "fadeInLeft 1s ease-out forwards";
 
         document.getElementById("nextButton").style.animation = "fadeOutDown .5s ease-in forwards";
 
@@ -125,11 +125,11 @@ function prevBeer()
 {
     if (drinkNumber == 2 && screenSize == 0)
     {
-        document.getElementById("03").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("04").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("f03").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s04").style.animation = "fadeOutDown .5s ease-in forwards"
         
-        document.getElementById("01").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("02").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f01").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s02").style.animation = "fadeInUp 1s ease-out forwards";
 
         document.getElementById("prevButton").style.animation = "fadeOutDown .5s ease-in forwards"
 
@@ -137,21 +137,21 @@ function prevBeer()
     }
     else if (drinkNumber == 3 && screenSize == 0)
     {
-        document.getElementById("05").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("06").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("f05").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s06").style.animation = "fadeOutDown .5s ease-in forwards"
         
-        document.getElementById("03").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("04").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f03").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s04").style.animation = "fadeInUp 1s ease-out forwards";
 
         drinkNumber = 2;
     }
     else if (drinkNumber == 4 && screenSize == 0)
     {
-        document.getElementById("07").style.animation = "fadeOutDown .5s ease-in forwards"
-        document.getElementById("08").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("f07").style.animation = "fadeOutDown .5s ease-in forwards"
+        document.getElementById("s08").style.animation = "fadeOutDown .5s ease-in forwards"
         
-        document.getElementById("05").style.animation = "fadeInUp 1s ease-out forwards";
-        document.getElementById("06").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("f05").style.animation = "fadeInUp 1s ease-out forwards";
+        document.getElementById("s06").style.animation = "fadeInUp 1s ease-out forwards";
 
         document.getElementById("nextButton").style.animation = "fadeInUp 1s ease-out forwards";
 
@@ -162,8 +162,8 @@ function prevBeer()
 
     if (drinkNumber == 2 && screenSize == 1)
     {
-        document.getElementById("02").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("01").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s02").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f01").style.animation = "fadeInLeft 1s ease-out forwards";
 
         document.getElementById("prevButton").style.animation = "fadeOutDown .5s ease-in forwards"
 
@@ -171,43 +171,43 @@ function prevBeer()
     }
     else if (drinkNumber == 3 && screenSize == 1)
     {
-        document.getElementById("03").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("02").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f03").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s02").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 2;
     }
     else if (drinkNumber == 4 && screenSize == 1)
     {
-        document.getElementById("04").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("03").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s04").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f03").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 3;
     }
     else if (drinkNumber == 5 && screenSize == 1)
     {
-        document.getElementById("05").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("04").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f05").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s04").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 4;
     }
     else if (drinkNumber == 6 && screenSize == 1)
     {
-        document.getElementById("06").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("05").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s06").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f05").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 5;
     }
     else if (drinkNumber == 7 && screenSize == 1)
     {
-        document.getElementById("07").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("06").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("f07").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("s06").style.animation = "fadeInLeft 1s ease-out forwards";
 
         drinkNumber = 6;
     }
     else if (drinkNumber == 8 && screenSize == 1)
     {
-        document.getElementById("08").style.animation = "fadeOutRight .5s ease-in forwards"
-        document.getElementById("07").style.animation = "fadeInLeft 1s ease-out forwards";
+        document.getElementById("s08").style.animation = "fadeOutRight .5s ease-in forwards"
+        document.getElementById("f07").style.animation = "fadeInLeft 1s ease-out forwards";
 
         document.getElementById("nextButton").style.animation = "fadeInUp 1s ease-out forwards";
 

@@ -576,6 +576,13 @@ body
 }
 /*#endregion Shapes */
 
+/*#region Colors */
+#f03
+{
+    background-image: linear-gradient(to top right, #c33b8d, #ee50b0);
+}
+/*#endregion Colors */
+
 /*#region Main page */
 .mainTitle
 {
