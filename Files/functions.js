@@ -11,7 +11,7 @@ function start()
         document.getElementById("f01").style.animation = "fadeInUp .5s ease-out forwards .3s";
         document.getElementById("s02").style.animation = "fadeInUp .5s ease-out forwards .5s";
     }
-    else if (window.screen.width > 1000) //screenSize == 1
+    else if (screenSize == 1 || window.screen.width > 1000)
     {
         document.getElementById("f01").style.animation = "fadeInLeft .5s ease-out forwards .3s";
     }
