@@ -1,0 +1,150 @@
+<!--The HTML code is property to Mr. You (Kristiyan Valchev) and can only be viewed-->
+<!--If you want to use part of the code, please first contact me: krisvalchev@gmail.com-->
+
+<html id = "html">
+    <head>
+        <link href = "https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel = "stylesheet">
+        <link href = "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;800&display=swap" rel = "stylesheet">
+        <link type = "text/css" rel = "stylesheet" href = "Files/Style.css">
+        <link rel = "icon" href = "Images/Logo.png" type = "image" sizes = "16x16">
+
+        <meta charset = "utf-8">
+        <meta name = "description" content = "This is a website for beer">
+        <meta name = "keywords" content = "Beer, Cool place, Ruse, Bulgaria">
+        <meta name = "author" content = "Kristiyan Valchev">
+        <meta name = "viewport" content = "width = device-width, user-scalable = no, initial-scale = 1" />
+        
+        <script type = "text/javascript" src = "Files/Functions.js"></script>
+        <script src = "https://kit.fontawesome.com/190623e0b3.js" crossorigin = "anonymous"></script>
+
+        <title>Бира</title>
+    </head>
+
+    <body id = "body" onload = "start()">
+        <div class = "topBar" id = "topBar">
+            <a href = "Index.html" class = "Logo">БИРА</a>
+            <a href = "#" style = "margin-left: 70px;">Новини</a>
+            <a href = "#" class = "Contacts">Контакти</a>
+
+            <a onclick = "openSideMenu()" class = "threeLineButton">
+                <div></div>
+                <div></div>
+                <div></div>
+            </a>
+        </div>
+
+        <div class = "sideMenu" id = "sideMenu">
+            <a onclick = "closeSideMenu()" class = "closeButton">
+                <div></div>
+                <div></div>
+            </a>
+
+            <a href = "Index.html" class = "Logo"><i class="fas fa-home" style = "padding-right: 20px;"></i> Начало</a>
+            <a href = "#"><i class="fas fa-newspaper" style = "padding-right: 20px;"></i> Новини</a>
+
+            <div class = "Line"></div>
+
+            <div class = "contactLinks">
+                <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+                <a href = "#"><i class = "fab fa-facebook-messenger"></i></a>
+                <a href = "#"><i class = "fas fa-phone-alt"></i></a>
+            </div>
+        </div>
+
+        <div class = "Cercle01"></div>
+        <div class = "Cercle02"></div>
+
+        <h1 class = "mainTitle">ОТКРИЙТЕ</h1>
+        <h3 class = "secondTitle">Ново</h3>
+
+        <div class = "firstBox" id = "01" style = "transform: translateY(100pc); visibility: hidden; opacity: 0;">
+            <h1>01</h1>
+            <img src = "Images/guinnessBeerGlass.png">
+            <h3>Бира Гинес</h3>
+            <h2>4.45лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "firstBox" id = "03" style = "visibility: hidden; opacity: 0;">
+            <h1>03</h1>
+            <img src = "Images/theWildBeerCoPinkCan.png">
+            <h3>Дивата бира</h3>
+            <h2>8.99лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "firstBox" id = "05" style = "visibility: hidden; opacity: 0;">
+            <h1>05</h1>
+            <img src = "Images/.png">
+            <h3>...</h3>
+            <h2>...лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "firstBox" id = "07" style = "visibility: hidden; opacity: 0;">
+            <h1>07</h1>
+            <img src = "Images/.png">
+            <h3>...</h3>
+            <h2>...лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <!--  Second Box  -->
+
+    <div class = "secondBox" id = "02" style = "transform: translateY(100pc); visibility: hidden; opacity: 0;">
+            <h1>02</h1>
+            <img src = "Images/theWildBeerCoOriginalCan.png">
+            <h3>Дивата бира</h3>
+            <h2>8.99лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "secondBox" id = "04" style = "visibility: hidden; opacity: 0;">
+            <h1>04</h1>
+            <img src = "Images/.png">
+            <h3>...</h3>
+            <h2>...лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "secondBox" id = "06" style = "visibility: hidden; opacity: 0;">
+            <h1>06</h1>
+            <img src = "Images/.png">
+            <h3>...</h3>
+            <h2>...лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "secondBox" id = "08" style = "visibility: hidden; opacity: 0;">
+            <h1>08</h1>
+            <img src = "Images/.png">
+            <h3>...</h3>
+            <h2>...лв.</h2>
+
+            <a href = "#">Повече</a>
+        </div>
+
+        <div class = "sideLinks">
+            <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+            <a href = "#"><i class = "fab fa-facebook-messenger"></i></a>
+            <a href = "#"><i class = "fas fa-phone-alt"></i></a>
+        </div>
+
+        <a onclick = "prevBeer()" class = "prevButton" id = "prevButton" style = "visibility: hidden; opacity: 0;">
+            <p>Предишен</p>
+            <i class = "fas fa-chevron-left"></i>
+        </a>
+
+        <a onclick = "nextBeer()" class = "nextButton" id = "nextButton" style = "animation: fadeInUp .5s ease-out forwards .5s; transform: translateY(100pc); visibility: hidden; opacity: 0;">
+            <p>Следващ</p>
+            <i class = "fas fa-chevron-right"></i>
+        </a>
+    </body>
+</html>
