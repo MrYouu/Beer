@@ -702,6 +702,23 @@ img
     }
 }
 
+@keyframes fadeOutInfoTextImageBox
+{
+    0%
+    {
+        transform: translateY(0pc);
+        visibility: unset;
+        opacity: 1;
+    }
+
+    100%
+    {
+        transform: translateY(100px);
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
 @keyframes fadeOutDown
 {
     0%
@@ -719,24 +736,7 @@ img
     }
 }
 
-@keyframes fadeOutRight
-{
-    0%
-    {
-        transform: translateX(0pc);
-        visibility: unset;
-        opacity: 1;
-    }
-
-    100%
-    {
-        transform: translateX(100px);
-        visibility: hidden;
-        opacity: 0;
-    }
-}
-
-@keyframes fadeInUp
+@keyframes fadeInInfoTextImageBox
 {
     0%
     {
@@ -753,18 +753,18 @@ img
     }
 }
 
-@keyframes fadeInLeft
+@keyframes fadeInUp
 {
     0%
     {
-        transform: translateX(100pc);
+        transform: translateY(100pc);
         visibility: hidden;
         opacity: 0;
     }
 
     100%
     {
-        transform: translateX(0px);
+        transform: translateY(0px);
         visibility: unset;
         opacity: 1;
     }
@@ -946,6 +946,40 @@ img
     .nextButton
     {
         right: 50;
+    }
+
+    @keyframes fadeOutInfoTextImageBox
+    {
+        0%
+        {
+            transform: translateX(0pc);
+            visibility: unset;
+            opacity: 1;
+        }
+
+        100%
+        {
+            transform: translateX(100px);
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeInInfoTextImageBox
+    {
+        0%
+        {
+            transform: translateX(100pc);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform: translateX(0px);
+            visibility: unset;
+            opacity: 1;
+        }
     }
 
     /* Colors */
@@ -1155,6 +1189,40 @@ img
     .secondTitle
     {
         left: 35;
+    }
+
+    @keyframes fadeOutInfoTextImageBox
+    {
+        0%
+        {
+            transform: translateY(0pc);
+            visibility: unset;
+            opacity: 1;
+        }
+
+        100%
+        {
+            transform: translateY(-100px);
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    @keyframes fadeInInfoTextImageBox
+    {
+        0%
+        {
+            transform: translateY(-100pc);
+            visibility: hidden;
+            opacity: 0;
+        }
+
+        100%
+        {
+            transform: translateY(0px);
+            visibility: unset;
+            opacity: 1;
+        }
     }
 }
 
